@@ -16,3 +16,5 @@ Das Projekt wird (wie immer) mit `mvn install` gebaut.
 + Zookeeper: Wenn die HBaseConfiguration nicht richtig eingestellt ist, kommt es zu folgendem Fehler:  
 ```Caused by: org.apache.hadoop.hbase.MasterNotRunningException: The node /hbase is not in ZooKeeper. It should have been written by the master. Check the value configured in 'zookeeper.znode.parent'. There could be a mismatch with the one configured in the master.```  
   Lösung: Konfiguration korrekt einstellen, siehe https://community.hortonworks.com/articles/2038/how-to-connect-to-hbase-11-using-java-apis.html
+
++ Maven invalid LOC header (bad signature): Fehler bei `maven install`, in diesem Fall muss der Inhalt des Ordners `C:\Users\[username]\.m2\repository` gelöscht und anschließende Maven-->Update Project --> X bei Force update of snapshots/releases durchgeführt werden, siehe http://stackoverflow.com/questions/32090921/maven-invalid-loc-header-bad-signature
